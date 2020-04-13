@@ -1,0 +1,27 @@
+Paging
+	Demand Paging
+		Valid/Invalid bit
+
+Optimisation Algorithms
+	FIFO
+	Optimal
+	LRU
+
+Approximation Algorithms
+	Reference bit
+	Second-chance
+	Enhanced second-chance
+
+Counting Algorithms
+	LFU
+	MFU
+	
+Frame Allocation
+	Fixed
+		Equal
+		Proportional
+	Priority
+
+Copy-On-Write (COW)
+Thrashing
+NUMA

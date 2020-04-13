@@ -1,0 +1,64 @@
+Producer/Consumer
+	Producer
+		if count == size
+			wait()
+		else
+			feed[ith] = produce()
+			inptr = (inptr+1) % size
+			count++
+			
+	Consumer
+		if count == 0
+			wait()
+		else
+			consume(feed[outptr])
+			outptr = (outptr+1) % full
+			count--
+			
+	Writer
+		if count == 0
+			wait()
+		else
+			consume(feed[outptr])
+			outptr = (outptr+1) % full
+			count--
+
+Race condition
+
+Process Structure
+	entry section
+	critical section
+	exit section
+	remainder section
+
+Switching format
+	Preemptive
+	Non-preemptive
+
+Solving critical section problem
+	Mutual exclusion - singular process in crit
+	Progress - if no one in crit, if one wants to go into crit, let it go into crit
+	Bounded wait - limit on number of times process can consecutively enter crit
+Peterson's solution (Declare want to go, set turn to next process, wait till other wants to go or turn is his)
+	flag[thisIndex] = true
+	turn = otherIndex
+	if flag[otherIndex] && turn==otherIndex
+		wait
+	CS
+	flag[thisIndex] = false
+	
+
+Locks
+Semaphores
+
+test_and_set() - set lock true and return original value
+	run into crit only if it was false before
+compare_and_swap()
+swap()
+
+<<<<< Not Complete >>>>>
+Reader/Writer
+Dining philosopher
+Peterson's
+Dekker's
+<<<<< Not Complete >>>>>

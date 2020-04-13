@@ -1,0 +1,19 @@
+TCR
+	... | 0/1(Reset/No Reset) | 0/1(Enable/Disable)
+CTCR
+	... | 0 | 0/1(CAPN.0/CAPN.1) | 00/01/10/11(Timer/Counter +ve edge/Counter -ve edge/Counter at both edges)
+PR (LSB)
+MR (MSB)
+MCR
+	... | S(Stop Count) | R(Reset) | I(INTR) | S(Stop Count) | R(Reset) | I(INTR)
+						MR1									MR0
+EMR
+	... | 00/01/10/11(Nothing/Preset EM/Set EM/Toggle EM) [EM1] | 00/01/10/11(Nothing/Preset EM/Set EM/Toggle EM) [EM0] | EM3 | EM2 | EM1 | EM0
+
+delay:
+	TCR Reset
+	Set edge/timer mode
+	Set PR and MR
+	Set MCR options
+	Set EMR action on match
+	TCR Start(No Reset)

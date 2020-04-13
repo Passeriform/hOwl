@@ -1,0 +1,16 @@
+Access latency = Average seek time + Average latency
+Average I/O time = Average access time + (amount to transfer/transfer rate) + controller overhead
+
+Seek Methods
+	FCFS
+	SSTF
+	SCAN
+	C-SCAN
+	LOOK
+	C-LOOK
+	
+RAID
+	0 - Stripe
+	1 - Mirror
+	10 - Striping mirrored
+	01 - Mirroring striped

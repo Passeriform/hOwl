@@ -1,0 +1,29 @@
+Dispatcher
+
+Utilization
+Throughput
+Turnaround
+Waiting Time
+Response Time
+
+Process Scheduling
+	FCFS
+	SJF
+	SRTF
+	Priority
+	RR
+	Multilevel
+	Multilevel Feedback
+	
+Processor
+	Homologous processors
+	Asymmetric Multiprocessing
+	Symmetric Multiprocessing
+	Processor Affinity
+		Soft
+		Hard
+	
+Load Balancing
+	Load Balancing
+	PUSH Migration
+	PULL Migration

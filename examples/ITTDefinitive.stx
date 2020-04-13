@@ -1,0 +1,305 @@
+WWW
+	Client-side scripting (javascript, actionscript, dart, vbscript)
+		static pages
+		dynamic pages
+	Server-side scripting (Python, ASP)
+	
+	hubs
+	bridges
+	gateway
+	router
+	repeater
+	
+	ISP
+	IP Address
+		v4
+		v6
+	URL
+		absolute
+		relative
+	DNS
+		types
+			root
+			primary
+			secondary
+	Intranet
+		communication
+		collaboration
+		platform independency
+		cost effective
+		productivity
+		business management
+		secutrity
+		specific userset
+		immediate updates
+		
+		internet vs intranet
+			size
+			cost
+			security
+			reliability
+			
+	Extranet
+		VPN
+		IPSEC
+		
+		Pros
+			Connectivity
+			Productivity
+			Collaborations
+		Cons
+			Hosting
+			Security
+	
+	Intranet vs Extranet
+		Connectivity by external party
+		Customers inclusion in network
+
+Maps
+	map name="mapname"
+		area shape coords
+	img usemap="#mapname"
+			
+Table
+	table border cellspacing cellpadding align valign
+		td rowspan colspan
+		
+Frameset
+	frameset name src cols rows frameborder bordercolor scrolling noresize
+	a href target
+		
+Form
+	form method action
+	select name
+		option
+	textarea rows cols
+	
+CSS
+	class
+	descendant
+	immediate child
+	attribute query
+	
+JS
+	window.alert
+	window.prompt
+	document.writeln
+	
+	parseInt
+	escape
+	unescape
+	eval
+	isFinite
+	isNaN
+	
+	Date()
+	getHours
+	
+	document.getElementById
+	document.querySelectorAll
+	document.forms
+	
+	
+	elem.innerHTML
+	elem.outerHTML
+	elem.attribute
+	elem.style
+	
+	document.createElement
+	document.removeChild
+	document.appendChild
+	document.replaceChild
+	document.cookie
+	
+JQuery
+	selectors
+		classes
+		ids
+		:first
+		:last
+		:even
+		:odd
+		:first-child
+		:last-child
+		:nth-child(n)
+		next(+)
+		sibling(~)
+		:contains('text')
+		:has(elem)
+		
+	animate
+		props
+		duration
+		cb	
+
+Perl
+	undef(var)
+	
+	scalar($)
+		arithmetic(+)
+		concat(.)
+		eq - equals
+		
+		uc
+		lc
+		ucfirst
+		lcfirst
+		
+		substr $string, from, length
+	
+	array(@)
+		push(@array, val)
+		$val = pop(@array)
+		unshift(@array, val)
+		$val = shift(@array)
+		
+		sort(@array)
+		reverse(@array)
+		scalar(@array) - gives length
+		
+		split(/delimiter/, $string)
+		splice @array, offset, replacedLength, listToBeAdded
+		join("delimiter", @array)
+		
+		@array = (1, 2, 3);
+		$array[index]
+		$#array - last index
+	
+	hash(%)
+		@arr = keys(%hash)
+		@arr = value(%hash)
+		($key, $value) = each(%hash)
+		delete(%hash{KEY})	
+	
+	file
+		open(INPUT, '<Filename.txt') or die "Failed";
+		while($val = <INPUT>) {
+			$val - has value of line
+		}
+		
+		open(OUTPUT, '>Filename.txt') or die "Failed";
+		open(APPEND, '>>Filename.txt') or die "Failed";
+		print OUTPUT/APPEND "Text wanted to put or append"
+		
+		if(-e "File") - file exists
+		
+	($sec, $min, $hr) = localtime(time)
+	
+	regex
+		^ - string start
+		$ - string end
+		
+		. - one character wildcard
+		
+		* - 0 or more
+		+ - 1 or more
+		? - 0 or 1
+		
+		{n} - n instances
+		{n, m} - min n, max m instances
+		
+		() - group for multiplier/capture groups (Access using $n)
+		
+		(a|b|c) - enum shit
+		
+		[A-Za-z0-9] - ranges
+		
+		[^A-Z] - negate range
+		
+		\d, \w, \s, \D, \W, \S - escape shorthand for ranges (Capitals Negate)
+		
+		\x__ - hexadecimal
+		
+		$string =~
+			m/pattern/ - match
+	
+	unless loop
+	
+	always put templating stuff in "" or `` and not ''
+	
+	$input = <STDIN>
+
+Python
+
+	json.dumps
+	json.loads
+
+	os.system('command')
+	
+	lists
+		append
+		extend
+		del
+		
+	math/cmath
+	
+	file
+		open("file", "w")
+		
+CGI
+	import cgi, cgitb
+	form = cgi.FieldStorage()
+	val = form.getValue('field')
+	print('content-type: text/html')
+	print('HTML Markup')
+	
+SQLite
+	import sqlite3
+	conn = sqlite3.connect("database")
+	res = conn.execute('command')
+	
+XML
+	External
+		XML
+			<!DOCTYPE elem SYSTEM "dtd.dtd">
+			<elem attrib="value">
+				<elemi></elemi>
+			</elem>
+			
+		DTD
+			<!ELEMENT elem (list of elements)>
+				<!ATTLIST elem attrib PCDATA/CDATA #IMPLIED/#FIXED/#REQUIRED "values">
+				<!ELEMENT elemi (#PCDATA)>
+				
+	Inline
+		<!DOCTYPE elem[
+			<!ELEMENT elemi (#PCDATA)>
+			<!ATTLIST elemi attrib PCDATA/CDATA #IMPLIED/#FIXED/#REQUIRED>]
+
+	PCDATA - Formatted HTML
+	CDATA - Print as text
+	
+XSLT
+	xsl
+		xsl:value-of select="field"
+		xsl:for-each select="xslpath/selection"
+		xsl:if test="field operator value"
+		xsl:sort select="field"
+		
+	xpath
+		// - deep search
+		@ - attribute
+		[] - select based on query
+		last() - end index
+		position() - index location
+		*/node() - wildcard
+		
+	mathml
+		mrow - one object
+		mi
+		mo
+		mn
+		mfrac
+		msqrt
+		mroot
+		msub
+		msup
+		msubsup
+		munderover
+		mfenced open close
+		mtable
+		mtr
+		mtd
+		&sum;
+		&int;
+		&plusminus;

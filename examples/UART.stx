@@ -1,0 +1,21 @@
+UART
+
+PCONP 1<<3
+LCR = 0x03 (No DLAB, No parity, 8-bit Word Length and 1 Stop Bit)
+	Or LCR = 0x83 (with DLAB)
+DLL = value
+DLM = value
+FCR = 0x03 (TxReset, RxReset, FiFo)
+
+If interrupt
+	IER = 0x03 (THRE, RBR)
+	
+	In interrupt handler
+		IRR>>1 (has thbit, rdbit, leftoverintr)
+		if(1) THR
+		if(2) RBR
+		
+Else
+	Check LSR in while(1)
+	if(LSR&0x01=0x01) readData = RBR
+	if((~LSR)&0x20==0x20) THR = writeData

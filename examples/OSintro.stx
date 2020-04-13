@@ -1,0 +1,81 @@
+User view
+	ease of use	[X]
+	performance	[X]
+	utilization	[ ]
+	
+System view
+	Resource allocator
+	Control program
+	
+Interrupt handling
+	polling
+	vectored
+
+Register > cache > Main memory > SSD > HDD > Optical > Magnetic tapes
+
+DMA
+	high speed I/O
+	direct block copying onto buffer by the controller
+	only one INTR per block
+
+Multiprocessors
+	throughput+
+	scale+
+	reliability+
+	
+	Asymmetric - each processor specific task
+	Symmetric - all processor all tasks
+	
+Clustered system
+	availability+
+	
+	Asymmetric - one machine becomes host
+	Symmetric - multiple nodes application
+	
+Multiprogramming (Jobs)
+	organise jobs
+	keep job scheduler
+	switch to another job on I/O wait
+	
+Multitasking (time sharing)
+	works with processes
+	keep CPU scheduler
+	swap process on process stall
+	
+Dual Mode
+	User Mode (Trap = 1)
+	Kernel Mode (Trap = 0)
+
+VMM - Virtual Machine Manager
+
+Program vs Process
+
+OS Process Management Activities
+	Create/Delete
+	Suspend/Resume
+	Synchronization Config
+	Communication Config
+	Deadlock Handling Config
+
+Protection (rules) vs Security (defense)
+
+UserID/SecurityID/GroupID
+
+Network vs Distributed
+	Network
+		fully autonomous
+		communicates with other independent systems
+	
+	Distributed
+		less autonomous
+		OSes communicate closely to give illuion of single system
+	
+Computing Environment
+	Traditional
+	Client-Server
+		Compute-server
+		File-server
+	P2P
+	Cloud
+	Distributed
+	Virtualize

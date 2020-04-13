@@ -1,0 +1,108 @@
+File System (Contigious logical address space)
+Types
+	Data
+		Numeric
+		Character
+		Binary
+	Program
+
+Structure
+	None (straight up sequences)
+	Simple record structure
+		Lines
+		Fixed length
+		Variable length
+	Complex structure (Use control characters)
+		Formatted
+		Relocatable load
+
+	Decided by
+		OS
+		Program
+
+Attributes (ITTNLP)
+	Identifier (within system id)
+	Type
+	Time/Data/UserID (protection/security and usage monitoring)
+	Name (human meta)
+	Location (file location pointer)
+	Protection (read/write/exec policies)
+
+File Ops (CDRWRTOC)
+	Create
+	Delete
+	Read
+	Write
+	Reposition
+	Truncate
+	Open
+	Close
+
+Access Methods
+	Sequential
+		read next
+		write next
+		reset
+		rewrite next
+	Direct
+		read relative block
+		write relative block
+		position to relative block
+			read next
+			write next
+		rewrite relative block
+
+Disk
+	Partitions (minidisks/slices)
+		raw (no fs)
+		formatted (fs) (Volume)
+			device directory
+			files
+
+Operations on directory (SDLCRT)
+	Search
+	Delete
+	List
+	Create
+	Rename
+	Traverse
+
+Directory logical organization (ENG)
+	Efficiency (search efficiency)
+	Naming (same filenames/readable by human)
+	Grouping (group files under same format)
+
+
+Directory structures
+	Single-level (directory to files, one to one)
+		Efficiency	[X]
+		Naming		[ ]
+		Grouping	[ ]
+
+	Two-level (branching path, static paths)
+		Efficiency	[X]
+		Naming		[X]
+		Grouping	[ ]
+
+	Three-level (tree path, logical paths)
+		Efficiency	[X]
+		Naming		[X]
+		Grouping	[X]
+
+	Acyclic graph directory (shared subdirectories)
+		Aliasing (2 names same logical link)
+
+		Deletion (Dangling pointers)
+			Backpointers (can't solve variable sized pointers)
+			Daisy chain organisation
+			Entry hold count solution
+
+		Directory entry type
+			Link (aliasing file)
+			Resolve link (follow along pointer to file)
+
+	General graph directory
+		no-cycles
+			Allow only links and not subdirectories (prevent)
+			Garbage collection (resolve)
+			Check for cycle on new link addition (verify)

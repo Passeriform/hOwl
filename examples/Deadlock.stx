@@ -1,0 +1,55 @@
+Resource Allocation Graph
+	Request edge (Process -> Resource)
+	Assignment edge (Resource -> Process)
+
+Check deadlock
+	if no cycles => no deadlock
+	else
+		if one instance per resource => deadlock
+		else => check manually
+
+Handling deadlock
+	Prevention
+		Mutual Exclusion - must hold for non-sharable resources
+		Hold and Wait
+			Options
+				require all resources alloc before exec
+				allow req only when proc has no resources alloc
+			Cons
+				low resource utilization
+				starvation possible
+		No preemption
+			Options
+				if req, resource req is not available, release all held resources
+				proc restarted only when all required resources are free
+	Avoidance
+		Declared maximum resource number
+		Resource Allocation Graph - single instance of resource type
+			Claim edge
+		Banker's Algorithm - multiple instances of resource type
+			Create Need = Max - Allocation
+			Safety Criterion
+				Create Work = Available
+				Create Finish = [false]
+
+				Iterate i such that
+					Finish[i] = false
+					Need(i) < Work
+					Work += Allocation[i]
+					Finish[i] = true
+
+				If no more procs - system in safe state
+
+	Recovery
+		Termination
+			Priority
+			Remaining time
+			Terminatable procs
+			Is batch?
+		Resource Preemption
+			Victim select
+			Rollback
+			Starvation
+
+Find safe state sequence
+	if nextMaxNeed + prevCurrNeed < max instance - safe

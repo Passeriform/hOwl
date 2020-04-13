@@ -1,0 +1,31 @@
+P0.4-11 - 0x00000FF0
+P1.23-26 - 0x07800000
+
+run infinite
+	increment counter
+	if counter reches decided second mark
+		set flag true
+	if flag true
+		reset flag
+		digitValue[0] +1
+		if(digitValue[0] == 10)
+			digitValue[0] = 0
+			digitValue[1] +1
+			
+			if(digitValue[1] == 10)
+				digitValue[1] = 0
+				digitValue[2] +1
+				
+				if(digitValue[2] == 10)
+					digitValue[2] = 0
+					digitValue[3] +1
+					
+					if(digitValue[3] == 10)
+						digitValue[3] = 0
+						
+	display()
+	
+display()
+	for i in 0..4
+		LPC_GPIO1->FIOPIN |= i<<23;
+		LPC_GPIO0->FIOPIN = sevenSegmentArrayValues[digitValue[i]]<<4

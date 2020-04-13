@@ -1,0 +1,29 @@
+Benifits of multithreading
+	responsiveness
+	resource sharing
+	economy
+	scalability
+	
+Multicore (divide, balance, data, dependency, debug)
+	process division
+	balance
+	data division
+	data dependency
+	testing and debugging
+	
+Concurrency vs Parallelism (true multiprocess)
+	Concurrency
+		may be single core
+		multiple process progress
+		
+	Parallelism
+		true multiprogramming
+		multiple processes concurrently work
+		
+		Data parallelism
+		Task parallelism
+		
+Multithreaded models
+	one-to-one
+	many-to-one
+	many-to-many

@@ -1,0 +1,86 @@
+Process Scheduling
+	Queue
+		Job
+		Ready
+		Device
+		
+I/O bound process
+CPU bound process
+
+Scheduler
+	Short Term (CPU)
+	Medium Term (Swap)
+	Long Term (Batch)
+	
+Context Switch - replace state
+
+fork(), exec()
+exit(), wait(), abort()
+
+zombie - no parent waiting
+orphan - parent terminated
+
+IPC
+	Shared memory
+		shared region
+		high speed/convenience
+		not secure
+	
+	Message passing
+		Comms by message exchange
+		smaller size
+		easy implementation
+		longer delays
+		
+		Communication link
+			Physical
+				Shared memory
+				Hardware bus
+				Network
+				
+			Logical
+				Direct / Indirect
+				Sync / Async
+				Automatic / Explicit buffer
+				
+		Exchange type (message is a struct)
+			Direct
+				Symmetric
+					send(Process, message)
+					receive(Process, message)
+					
+				Asymmetric
+					send(message)
+					receive(message)
+				
+				Links automatically
+				Exactly one pair
+				Exactly one link between the pair
+				Usually bidirectional
+			
+			Indirect (Mailbox)
+				send(Mailbox, message)
+				receive(Mailbox, message)
+				
+				Links between common processes
+				Links between mailbox and multiple processes
+				Each pair of procs may share multiple links
+				Usually bidirectional
+				
+				Solution to ambiguous receiver
+					Allow one on one link only
+					Allow only one process at a time to execute receive
+					Allow receiver selection and send back receiver's id to sender
+					
+		Synchronization
+			Synchronus (blocking)
+				Blocking send
+				Blocking receive
+			Asynchronus (non-blocking)
+				Non-blocking send
+				Non-blocking receive
+				
+		Buffering
+			Zero Capacity - no queue
+			Bounded Capacity
+			Unbounded Capacity

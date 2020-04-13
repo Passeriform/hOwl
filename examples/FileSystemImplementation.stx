@@ -1,0 +1,62 @@
+in-place rewrite and Random Access
+I/O in blocks of sectors
+File Control Block - info about file
+device driver
+organized into layers
+
+File Structure
+	Logical storage unit
+	Related information (Meta)
+
+File system
+	present on seconday storage
+	user interface to storage (logical to physical)
+	efficiency (local storage and retrieval)
+
+Layered FS (ALFBID)
+	Application
+	Logical
+	File-Org
+	Basic FS
+	I/O Control
+	Devices
+	
+Typical FS (PDOSD)
+	Permissions
+	Dates
+	Owner/Group/ACL data
+	Size
+	Data blocks or pointers
+
+Directory implementation
+	Linear list
+		easy to program
+		search expensive
+		use B+ for alphabetical storage
+	Hash table
+		search better
+		collisions
+		entries must be fixed sized
+		
+Allocation methods
+	Contigious
+		start offset and length
+		need file size
+		compaction (off-line/on-line)
+		Pick Q+start block and pick R displacement
+	Linked
+		no external fragmentation
+		every block has pointer to next block
+		need a free space management system
+		internal fragmentation increased
+		locating takes many I/O and seeks
+	Indexed
+		index block has pointer to all data blocks
+		no external fragmentation
+		dynamic access with overhead
+		max only 1 index block needed
+		index table needed
+	
+Free-space management
+	free space list
+	

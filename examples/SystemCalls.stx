@@ -1,0 +1,11 @@
+System Calls
+	File
+		CRUD
+		Open/Close
+		RW
+		Get/Set
+	Device
+		Req/Release
+		RW
+		Get/Set
+		Attach/Detach

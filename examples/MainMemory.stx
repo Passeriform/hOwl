@@ -1,0 +1,89 @@
+CPU Stall
+Base (Relocation) and Limit Registers
+	Mem access has many cycles
+	Reg access has one cycle
+	Defines logical address space with legal addresses
+
+Hardware address protection => base<address<base+limit
+
+Source Code => Symbolic
+Compiled Code => Symbolic -> Relocatable
+Linker/Loader => Relocatable -> Absolute
+
+Binding data to memory
+	Compile Time (Absolute Code)
+	Load Time (Relocatable Code)
+	Execution Time (Binding delayed till runtime)
+	
+User program -> MMU (Translates logical to physical addr) -> Manages physical address
+
+Logical (created by CPU)
+Physical (used by Memory Unit)
+
+Linking
+	Static => libraries and codde combined by loader into binary
+	Dynamic (linking postponed until execution)
+		Stub (replaces with code itself upon execution)
+		
+Backing store
+
+Double Buffering
+	I/O to kernel space
+	
+Memory Partitions
+	OS -> User Procs -> Other Processes
+	
+Contigious Alloc
+	(Base Register, Limit Register) -> MMU (Map logical address dynamically) -> Transient kernel (changing in size)
+	
+Hole => Block of available memory
+
+Fits
+	First Fit
+	Best Fit
+	Worst Fit
+
+Fragmentation
+	External
+	Internal
+	Remedy
+		Compaction -> Shuffle and cluster free memory together (ONLY IF RELOCATION IS DYNAMIC)
+
+Physical memory : frames :: Logical memory : pages
+
+
+Page Table
+	PTBR => Page table base register
+	PTLR => Page table length register
+	TLB => Translation look-aside buffer
+		ASID => Address space identifiers
+		
+Effective Addressing Time
+	Associative Lookup (e)
+	Hit Ratio (a) => % of time page found in lookup
+	Memory Access Time (m)
+	EAT = (a/100) * (e+m) + (1-(a/100)) * (e+m+m)
+
+Memory Protection
+	Valid/invalid bit => indicates if page in process' logical address space
+	PTLR
+	
+Paging
+	Heirarchical => Multi-pagetable system
+	Hashed
+		Hashing
+		Clustered Page Table
+			implemented for 64-bit architecture
+			useful for sparse address space
+	Inverted => Only feed physical address of pages that exist in memory
+	
+
+Segment
+	Base
+	Limit
+	
+Segment Table
+	STBR => Base Register
+	STLR => Length Register
+	
+Code sharing at segment level

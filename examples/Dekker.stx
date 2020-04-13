@@ -1,0 +1,10 @@
+Algo 1
+	Use turn variable check and change after crit
+Algo 2
+	Use independent flags, wait if other's true, set self false after crit
+Algo 3
+	Set self flag true outside, check for other's flag, set self false after crit
+Algo 4
+	Algo 3 but wait arbitrary in while to unset and set self flag
+Algo 5
+	Use turn and flags, same as Algo 4, but wait until its not self turn
