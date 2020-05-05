@@ -43,8 +43,8 @@ func isComparison(scanner *Scanner) bool {
 }
 
 func isHyphen(scanner *Scanner) bool {
-	ch_slice := scanner.peekMany(3)
-	if ch_slice[0] == ' ' && ch_slice[1] == '-' && ch_slice[2] == ' ' {
+	ch_slice := scanner.peekMany(2)
+	if ch_slice[0] == '-' && ch_slice[1] == '-' {
 		return true
 	}
 	return false

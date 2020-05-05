@@ -1,10 +1,10 @@
-package hOwl
+package howl
 
 import (
 	"fmt"
 	"testing"
 
-	tokenizer "github.com/passeriform/hOwl/internal/pkg/tokenizer"
+	tokenizer "github.com/passeriform/howl/internal/pkg/tokenizer"
 )
 
 func TestOnlyParen(t *testing.T) {

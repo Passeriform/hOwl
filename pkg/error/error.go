@@ -1,11 +1,10 @@
-package hOwl
+package howl
 
 import "fmt"
 
 // The error that returns when found an unknown token.
 type UnknownTokenError struct {
-	Literal  string
-	Position Position
+	TokenType  TokenType
 }
 
 // Get error message as string.

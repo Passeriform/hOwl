@@ -1,4 +1,4 @@
-package hOwl
+package howl
 
 import (
 	"testing"

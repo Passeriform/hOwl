@@ -1,4 +1,4 @@
-module github.com/passeriform/hOwl
+module github.com/passeriform/howl
 
 go 1.14
 

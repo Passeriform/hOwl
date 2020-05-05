@@ -2,6 +2,7 @@ package main
 
 import (
 	"flag"
+	"fmt"
 	"os"
 )
 
@@ -13,5 +14,5 @@ func main() {
 	}
 
 	location := flag.Arg(0)
-
+	fmt.Sprintf("%s", location)
 }

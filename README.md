@@ -61,3 +61,20 @@ Activator: `?`
 - Art
 - Math
 - Algo
+
+
+# For my sanity: context switching from rust.
+- cmd has only binary representations
+- pkg and internal are made imagining the following scenario:
+
+MyBigProject
+├── MySmallProjectX
+│   ├── pkg
+│   │   └── SharedPackageX
+│   └── internal
+│       └── InternalPackageX
+└── MySmallProjectY
+    ├── pkg
+    │   └── SharedPackageX
+    └── internal
+        └── InternalPackageY
